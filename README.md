@@ -1,5 +1,3 @@
-# vueecharts
-
 ## Project setup
 ```
 yarn install
@@ -27,3 +25,6 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# vue-echarts1
+>>>>>>> 3afe446411b40ea8cbfb7d509e7a5cda78a860ef
