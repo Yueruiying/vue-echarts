@@ -12,16 +12,31 @@ import 'echarts/lib/component/title'
 
 export default {
   props: {
+    titleOption: {
+      type: Object,
+      default: () => ({})
+    },
+    legendVisible: {
+      type: Boolean,
+      default: true
+    },
+    titleVisible: {
+      type: Boolean,
+      default: false
+    },
+    title: String,
     data: Object
   },
   data: function() {
     return {
       options: {
-        title: {
-          text: "ECharts 入门示例"
-        },
+        title: Object.assign({}, this.titleOption, {
+          text: this.title,
+          show: this.titleVisible
+        }),
         tooltip: {},
         legend: {
+          show: this.legendVisible,
           data: this.data.columns || []
         },
         yAxis: {

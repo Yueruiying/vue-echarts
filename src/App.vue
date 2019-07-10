@@ -1,13 +1,17 @@
 
 <template>
-  <simple-bar :width="500" :height="400" :data="chartData" />
+  <div>
+    <simple-bar :width="500" :height="400" :data="chartData" />
+    <stack-bar :width="500" :height="400" :data="chartData" />
+  </div>
 </template>
 
 <script>
 /* eslint-disable */
 import SimpleBar from './components/bar/simple-bar'
+import StackBar from './components/bar/stack-bar'
 export default {
-  components: { SimpleBar },
+  components: { SimpleBar, StackBar },
   data: function() {
     return {
       chartData: {}
